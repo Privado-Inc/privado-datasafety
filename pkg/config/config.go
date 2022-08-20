@@ -63,8 +63,8 @@ func init() {
 		DefaultLicensePath:               filepath.Join(home, ".privado", licenseFileName),
 		PrivacyResultsPathSuffix:         filepath.Join(".privado", "privacy.json"),
 		PrivacyReportsDirectorySuffix:    filepath.Join(".privado", "reports"),
-		PrivadoRepository:                "https://github.com/Privado-Inc/privado",
-		PrivadoRepositoryName:            "Privado-Inc/privado",
+		PrivadoRepository:                "https://github.com/Privado-Inc/privado-datasafety",
+		PrivadoRepositoryName:            "Privado-Inc/privado-datasafety",
 		PrivadoRepositoryReleaseFilename: fmt.Sprintf("privado-%s-%s.tar.gz", runtime.GOOS, runtime.GOARCH),
 		SlowdownTime:                     600 * time.Millisecond,
 		Container: &ContainerConfiguration{

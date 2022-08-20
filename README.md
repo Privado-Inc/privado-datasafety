@@ -1,3 +1,9 @@
+> **Note**: This repository is a copy of v1.x releases of Privado Data Safety Generator (earlier, [Privado](https://github.com/Privado-Inc/privado)) and is archived in favor of complete overhaul of Privado CLI ([v2.0](https://github.com/Privado-Inc/privado)). Privado v2.0 introduces dataflows with a wide array of detections and use-cases. The equivalent GoLang interface has now been moved [Privado CLI](https://github.com/Privado-Inc/privado-cli), and the new scan engine is open-sourced and available at [Privado Core](https://github.com/Privado-Inc/privado-core).
+>     
+> The project is stable and users may choose to continue using this tool for datasafety report generation. However, this is not under active development and requested features may not be implemented.
+    
+<br />
+
 # Privado User Documentation
 
 [![slack](https://img.shields.io/badge/slack-privado-brightgreen.svg?logo=slack)](https://join.slack.com/t/devprivops/shared_invite/zt-yk5zcxh3-gj8sS9w6SvL5lNYZLMbIpw)
@@ -56,7 +62,7 @@ You can install Privado CLI in multiple manners:
 The installation script will download and setup the latest stable release for you as per your OS and arch. Run: 
 
 ```
-curl -o- https://raw.githubusercontent.com/Privado-Inc/privado/main/install.sh | bash
+curl -o- https://raw.githubusercontent.com/Privado-Inc/privado-datasafety/main/install.sh | bash
 ```
 
 To uninstall, simply delete `~/.privado/bin`.
@@ -65,13 +71,13 @@ To uninstall, simply delete `~/.privado/bin`.
 If you are a GoLang fan, you can use the `go install` command to install the Privado CLI:
 
 ```
-go install github.com/Privado-Inc/privado@latest
+go install github.com/Privado-Inc/privado-datasafety@latest
 ```
 
 This will place the `privado` binary in your `GOPATH`'s bin directory. This directory must be added to the `$PATH` environment variable. You can learn more [here](https://www.digitalocean.com/community/tutorial_series/how-to-install-and-set-up-a-local-programming-environment-for-go). 
 
 ### Install Release Manually
-We use [GitHub Releases](https://github.com/Privado-Inc/privado/releases) to ship versioned `privado` releases for supported platforms. You can download a executable of Privado CLI for your platform.   
+We use [GitHub Releases](https://github.com/Privado-Inc/privado-datasafety/releases) to ship versioned `privado` releases for supported platforms. You can download a executable of Privado CLI for your platform.   
 
 To know your architecture, you can run: 
 ```
@@ -83,7 +89,7 @@ For detailed platform-specific instructions to setup `privado`, refer below:
 <summary>MacOSX</summary>
  
 #### ARM64 (M1 Chip)
-To setup `privado` for macOS (arm64) i.e. Macbook with M1 chip, download `privado-darwin-arm64.tar.gz` from the [latest release](https://github.com/Privado-Inc/privado/releases/tag/latest). 
+To setup `privado` for macOS (arm64) i.e. Macbook with M1 chip, download `privado-darwin-arm64.tar.gz` from the [latest release](https://github.com/Privado-Inc/privado-datasafety/releases/tag/latest). 
 
 Navigate to the download directory and run:
 
@@ -94,7 +100,7 @@ $ mv privado /usr/local/bin/
 ```
 
 #### AMD64 (Intel Chip)
-To setup `privado` for macOS (amd64), download `privado-darwin-amd64.tar.gz` from the [latest release](https://github.com/Privado-Inc/privado/releases/tag/latest). 
+To setup `privado` for macOS (amd64), download `privado-darwin-amd64.tar.gz` from the [latest release](https://github.com/Privado-Inc/privado-datasafety/releases/tag/latest). 
 
 Navigate to the download directory and run:
 
@@ -108,7 +114,7 @@ $ mv privado /usr/local/bin/
 <details>
  <summary>Linux</summary>
 
-To setup `privado` on your linux system, download the respective zip from [latest release](https://github.com/Privado-Inc/privado/releases/tag/latest) for your platform. Navigate to the download directory and run the following commands:
+To setup `privado` on your linux system, download the respective zip from [latest release](https://github.com/Privado-Inc/privado-datasafety/releases/tag/latest) for your platform. Navigate to the download directory and run the following commands:
 
 #### ARM64
 ```
@@ -129,7 +135,7 @@ $ mv privado /usr/bin/privado
 <details>
 <summary>Windows</summary>
 
-To setup `privado` on your windows system, download `privado-windows-amd64.zip` from [latest release](https://github.com/Privado-Inc/privado/releases/tag/latest). Navigate to the download directory and run the following `bash` commands:
+To setup `privado` on your windows system, download `privado-windows-amd64.zip` from [latest release](https://github.com/Privado-Inc/privado-datasafety/releases/tag/latest). Navigate to the download directory and run the following `bash` commands:
 
 ```
 $ mkdir -p $HOME/.privado/bin
@@ -150,10 +156,10 @@ When using [WSL](https://docs.microsoft.com/en-us/windows/wsl/), we recommend mo
 ### Build Privado CLI Locally
 If you do not wish to use the pre-built binaries shipped in releases, you can choose to build Privado CLI locally. To do this, make sure that [GoLang](https://go.dev/doc/install) is installed and follow the following steps:
 
-1. Clone the repository: `git clone https://github.com/Privado-Inc/privado.git`    
+1. Clone the repository: `git clone https://github.com/Privado-Inc/privado-datasafety/.git`    
 2. Change directory: `cd privado`   
 3. Skip this step if you intend to build the `main` branch.    
-    To build the [latest stable release](https://github.com/Privado-Inc/privado/releases/tag/latest), checkout the `latest` tag: `git checkout latest`   
+    To build the [latest stable release](https://github.com/Privado-Inc/privado-datasafety/releases/tag/latest), checkout the `latest` tag: `git checkout latest`   
 4. Build with Go: `go build`   
 5. You can now run `./privado`.   
 
